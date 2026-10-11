@@ -1,0 +1,23 @@
+<!-- templates/edit.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h2>Edit Employee</h2>
+    <form action="/employees/{{ employee.id }}/edit" method="POST">
+        <label>Nama:</label><br>
+        <input type="text" name="name" value="{{ employee.name }}" required><br><br>
+
+        <label>Posisi:</label><br>
+        <input type="text" name="position" value="{{ employee.position }}"><br><br>
+
+        <label>Gaji:</label><br>
+        <input type="number" name="salary" value="{{ employee.salary }}"><br><br>
+
+        <button type="submit">Simpan</button>
+        <a href="/employees/new">Batal</a>
+    </form>
+</body>
+</html>
